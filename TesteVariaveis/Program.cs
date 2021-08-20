@@ -17,13 +17,13 @@ namespace TesteVariaveis
 
         static void Main(string[] args)
         {
-            TesteDataStruct();
+            //TesteDataStruct();
 
-            TesteClsPessoa();
+           // TesteClsPessoa();
 
             TesteConcatString();
 
-            ConversaoImplicita();
+           /* ConversaoImplicita();
 
             ConversaoExplicita();
 
@@ -33,7 +33,7 @@ namespace TesteVariaveis
 
             Unboxing();
 
-            TesteVar();
+            TesteVar();*/
 
             Console.ReadLine();
 
@@ -53,13 +53,13 @@ namespace TesteVariaveis
 
             Console.WriteLine(" Year / Month: " + ag.dtAniversario.ToString("y"));
 
-            Console.WriteLine("02 / 10 2021: " + ag.dtAniversario.ToString("“MM ‘/’ dd yyyy"));
+            Console.WriteLine("08 / 10 2021: " + ag.dtAniversario.ToString("“MM ‘/’ dd yyyy"));
 
-            Console.WriteLine("10.02.2021: " + ag.dtAniversario.ToString("dd.MM.yyyy"));
+            Console.WriteLine("20.08.2021: " + ag.dtAniversario.ToString("dd.MM.yyyy"));
 
-            Console.WriteLine("10.02.2021 07:00 : " + ag.dtAniversario.ToString("MM.dd.yyyy HH: mm"));
+            Console.WriteLine("20.08.2021 08:00 : " + ag.dtAniversario.ToString("MM.dd.yyyy HH: mm"));
 
-            Console.WriteLine(" Wednesday @ 7:00 PM : " + ag.dtAniversario.ToString("dddd @ hh: mm tt", System.Globalization.CultureInfo.InvariantCulture));
+            Console.WriteLine(" Friday @ 8:00 PM : " + ag.dtAniversario.ToString("dddd @ hh: mm tt", System.Globalization.CultureInfo.InvariantCulture));
             Console.WriteLine("----------------------------------------------");
             Console.WriteLine(" ");
         }
@@ -73,12 +73,25 @@ namespace TesteVariaveis
         {
             //Usando o operador “+”
             string FraseMais = "Estamos " + "iniciando " + "mais " + "um " + "semestre.";
+            Console.WriteLine("+:" + FraseMais);
+
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine(" ");
 
             //Usando o método Concat
             string MetodoConcat = string.Concat("Estamos ", "iniciando ", "mais ", "um ", "semestre.");
+            Console.WriteLine("Concat: " + MetodoConcat);
+
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine(" ");
 
             //Usando o método join
             string MetodoJoin = string.Join("Estamos ", "iniciando ", "mais ", "um ", "semestre.");
+            Console.WriteLine("Join: " + MetodoJoin);
+
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine(" ");
+
 
             //Usando a classe StringBuilder(System.Text)
             StringBuilder sb = new StringBuilder();
@@ -90,24 +103,47 @@ namespace TesteVariaveis
 
             string stringBuilder = sb.ToString();
 
-            //Usando o método String.Format
-            string MetodoFormat = string.Format("Estamos ", "iniciando ", "mais ", "um ", "semestre.");
-            string MetodoFormat2 = string.Format("{0} {1} {2} {3} {4}", "Estamos ", "iniciando ", "mais ", "um ", "semestre.");
-
-            //Usando o operador $
-            string OperadorDolar = $"{ "Estamos "} { "iniciando "} { "mais "} { "um "} { "semestre."}";
-
-            Console.WriteLine("+:" + FraseMais);
-            Console.WriteLine("Concat: " + MetodoConcat);
-            Console.WriteLine("Join: " + MetodoJoin);
             Console.WriteLine("stringBuilder: " + stringBuilder);
-            Console.WriteLine("Fomrat: " + MetodoFormat);
-            Console.WriteLine("Format 2 : " + MetodoFormat2);
-            Console.WriteLine("$ : " + OperadorDolar);
 
             Console.WriteLine("----------------------------------------------");
             Console.WriteLine(" ");
 
+
+            //Usando a classe StringBuilder em linhas diferentes(System.Text)
+            StringBuilder sblinha = new StringBuilder();
+            sblinha.AppendLine("Linha 1");
+            sblinha.AppendLine("Linha 2 ");
+            sblinha.AppendLine("Linha 3");
+
+            string stringBuilderLinha = sblinha.ToString();
+
+            Console.WriteLine("stringBuilderLinha: " + stringBuilderLinha);
+
+
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine(" ");
+
+            //Usando o método String.Format
+            string MetodoFormat = string.Format("Estamos ", "iniciando ", "mais ", "um ", "semestre.");
+            Console.WriteLine("Format sem índice: " + MetodoFormat);
+
+
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine(" ");
+
+            string MetodoFormat2 = string.Format("{0} {1} {2} {3} {4}", "Estamos ", "iniciando ", "mais ", "um ", "semestre.");
+            Console.WriteLine("Format com índice : " + MetodoFormat2);
+
+
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine(" ");
+
+            //Usando o operador $
+            string OperadorDolar = $"{ "Estamos "} { "iniciando "} { "mais "} { "um "} { "semestre."}";
+            Console.WriteLine("$ : " + OperadorDolar);
+
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine(" ");
         }
 
         public static void ConversaoImplicita()
