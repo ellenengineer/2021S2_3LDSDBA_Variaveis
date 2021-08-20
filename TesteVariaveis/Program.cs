@@ -17,13 +17,13 @@ namespace TesteVariaveis
 
         static void Main(string[] args)
         {
-            //TesteDataStruct();
+            TesteDataStruct();
 
-           // TesteClsPessoa();
+            TesteClsPessoa();
 
             TesteConcatString();
 
-           /* ConversaoImplicita();
+            ConversaoImplicita();
 
             ConversaoExplicita();
 
@@ -33,7 +33,7 @@ namespace TesteVariaveis
 
             Unboxing();
 
-            TesteVar();*/
+            TesteVar();
 
             Console.ReadLine();
 
@@ -206,7 +206,7 @@ namespace TesteVariaveis
 
         public static void TesteVar()
         {
-            var num = 10;
+            var num = "teste";
             Console.WriteLine("Var: " + num);
 
             Console.WriteLine("----------------------------------------------");
