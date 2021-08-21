@@ -6,6 +6,11 @@ namespace TesteOperadores
     {
         static void Main(string[] args)
         {
+            //comentarios1
+            /*comentario 2
+            comentario 3
+            comentario n*/
+
             Atribuicao();
             Aritmetico();
             AritmeticoAtrReduzida();
@@ -45,8 +50,6 @@ namespace TesteOperadores
 
 
         }
-
-
 
         public static void AritmeticoAtrReduzida()
         {
@@ -106,31 +109,46 @@ namespace TesteOperadores
 
         }
 
-
         public static void Relacionais()
         {
             int a = 10;
             int b = 20;
-            bool igualA = a == b;
-            bool diferenteA = a != b;
-            bool maiorQue = a > b;
-            bool menorQue = a < b;
-            bool maiorIgualA = a >= b;
-            bool menorIgualA = a <= b;
-
             Console.WriteLine("Operadores relacionais");
-            Console.WriteLine("== :" + igualA);
-            Console.WriteLine("!= :" + diferenteA);
-            Console.WriteLine("> :" + maiorQue);
-            Console.WriteLine("< :" + menorQue);
-            Console.WriteLine(">= :" + maiorIgualA);
-            Console.WriteLine("<= :" + menorIgualA);
+            Console.WriteLine(" ");
 
+            bool igualA = a == b;
+            Console.WriteLine("== :" + igualA);
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine(" ");
+
+
+            bool diferenteA = a != b;
+            Console.WriteLine("!= :" + diferenteA);
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine(" ");
+
+            bool maiorQue = a > b;
+            Console.WriteLine("> :" + maiorQue);
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine(" ");
+
+
+            bool menorQue = a < b;
+            Console.WriteLine("< :" + menorQue);
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine(" ");
+
+            bool maiorIgualA = a >= b;
+            Console.WriteLine(">= :" + maiorIgualA);
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine(" ");
+
+            bool menorIgualA = a <= b;
+            Console.WriteLine("<= :" + menorIgualA);
             Console.WriteLine("----------------------------------------------");
             Console.WriteLine(" ");
 
         }
-
 
 
         public static void Logicos()
@@ -139,14 +157,21 @@ namespace TesteOperadores
             int b = 20;
             int c = 30;
             int d = 40;
+            Console.WriteLine("Operadores Lógicos");
+            Console.WriteLine("");
 
             bool and = (a < b) && (c < d);
-            bool or = (a < b) || (c < d);
-            bool not = !(a == b);
-
-            Console.WriteLine("Operadores Lógicos");
             Console.WriteLine("&& :" + and);
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine(" ");
+
+
+            bool or = (a < b) || (c < d);
             Console.WriteLine("|| :" + or);
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine(" ");
+
+            bool not = !(a == b);
             Console.WriteLine("! :" + not);
 
             Console.WriteLine("----------------------------------------------");
@@ -158,7 +183,7 @@ namespace TesteOperadores
         {
             int a = 10;
             int b = 20;
-            string resultadoTernario = a < b ? "Maior!" : "Menor";
+            string resultadoTernario = a < b ? "Menor!" : "Maior";
             Console.WriteLine("Operador Ternário: " + resultadoTernario);
 
             Console.WriteLine("----------------------------------------------");
